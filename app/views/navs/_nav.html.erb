@@ -6,12 +6,12 @@
           <% if user_signed_in? %>
             <%= link_to 'Logout',destroy_user_session_path %>
             <%= link_to 'Devenir hébergeur',new_house_path,class:'btn btn-outline-primary' %>
+            <%= link_to 'Category', categories_path %>
           <% else %>  
             <%= link_to 'signup',new_user_registration_path %>
             <%= link_to 'Login',new_user_session_path %>
-            
-          <% end %>
-            
+            <%= link_to 'Category', categories_path %>
+          <% end %>  
        </div> 
             <a class="navbar-brand" href="#">Fixed navbar</a>
     </div>        
