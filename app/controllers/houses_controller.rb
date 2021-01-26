@@ -1,4 +1,5 @@
 class HousesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_house, only: [:show, :edit, :update, :destroy]
 
   # GET /houses
@@ -25,6 +26,8 @@ class HousesController < ApplicationController
   # POST /houses.json
   def create
     @house = House.new(house_params)
+    @house.user_id = current_user.id
+
 
     respond_to do |format|
       if @house.save
@@ -69,6 +72,6 @@ class HousesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def house_params
-      params.fetch(:house, {})
+      params.require(:house).permit(:nom,:prenom,:adresse,:mail,:contact,:categorie,:nombre_de_chambre,:localisation,:prix,:category_id,:user_id)
     end
 end

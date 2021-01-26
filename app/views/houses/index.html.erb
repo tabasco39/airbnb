@@ -1,25 +1,34 @@
-<p id="notice"><%= notice %></p>
+  <div class='container mt-5 pt-4'>
+        <p id="notice"><%= notice %></p>
 
-<h1>Houses</h1>
+        <h1 >Houses</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-  <tbody>
-    <% @houses.each do |house| %>
-      <tr>
-        <td><%= link_to 'Show', house %></td>
-        <td><%= link_to 'Edit', edit_house_path(house) %></td>
-        <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <tbody>
+            <% @houses.each do |house| %>
+            <%= house.nom %>
+            <%= house.prenom %>
+            <%= house.adresse %>
+            <%= house.mail %>
+            <%= house.contact %>
+            <%= house.category.name %>
+            
+              <tr>
+                <td><%= link_to 'Show', house %></td>
+                <td><%= link_to 'Edit', edit_house_path(house) %></td>
+                <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-<br>
+        <br>
 
-<%= link_to 'New House', new_house_path %>
+        <%= link_to 'New House', new_house_path %>
+</div>
