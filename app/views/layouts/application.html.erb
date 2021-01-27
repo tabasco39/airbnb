@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PropertyFinder</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Title -->
+    <title>H. Find Your Home NOW</title>
+
+    <!-- Favicon -->
+    <%= favicon_link_tag 'core-img/favicon.ico' %>
+    
+    <!-- Stylesheets -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Menu Partials -->
+    <%= render 'layouts/navigation' %>
+    
+     <%= yield %>
+    
+    <!-- Footer Partials -->
+    <%= render 'layouts/footer' %>
+
+    <!-- Javascripts -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

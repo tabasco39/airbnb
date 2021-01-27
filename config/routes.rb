@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # Set Views/Home/index is the main page
+  root 'home#index'
+  get 'home/index', to: 'home#index'
+  
 end
