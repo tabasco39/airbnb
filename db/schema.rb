@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2021_01_26_120706) do
+ActiveRecord::Schema.define(version: 2021_01_27_071244) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,9 +39,6 @@ ActiveRecord::Schema.define(version: 2021_01_26_120706) do
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
-=======
-ActiveRecord::Schema.define(version: 2021_01_27_071244) do
->>>>>>> b26b6ee2f7935c32c032c1c266c382078e3f7381
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -97,14 +93,11 @@ ActiveRecord::Schema.define(version: 2021_01_27_071244) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-=======
   add_foreign_key "houses", "categories"
   add_foreign_key "houses", "locations"
   add_foreign_key "houses", "users"
   add_foreign_key "reservations", "houses"
   add_foreign_key "reservations", "users"
->>>>>>> b26b6ee2f7935c32c032c1c266c382078e3f7381
 end
