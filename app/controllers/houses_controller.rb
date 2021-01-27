@@ -11,8 +11,14 @@ class HousesController < ApplicationController
 
   # GET /houses/1
   # GET /houses/1.json
+<<<<<<< HEAD
   def show
     @house = House.find(params[:id])
+=======
+  def show 
+    @house = House.find(params[:id])
+    @reservation = @house.reservations.new()
+>>>>>>> b26b6ee2f7935c32c032c1c266c382078e3f7381
   end
 
   # GET /houses/new
@@ -75,6 +81,10 @@ class HousesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def house_params
+<<<<<<< HEAD
       params.require(:house).permit(:nom,:prenom,:adresse,:mail,:contact,:categorie,:nombre_de_chambre,:localisation,:prix,:category_id,:user_id,images:[])
+=======
+      params.require(:house).permit(:nom,:prenom,:adresse,:mail,:contact,:categorie,:nombre_de_chambre,:localisation,:prix,:category_id,:user_id,:location_id)
+>>>>>>> b26b6ee2f7935c32c032c1c266c382078e3f7381
     end
 end

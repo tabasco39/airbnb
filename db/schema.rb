@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_01_26_120706) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -39,6 +40,9 @@ ActiveRecord::Schema.define(version: 2021_01_26_120706) do
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
+=======
+ActiveRecord::Schema.define(version: 2021_01_27_071244) do
+>>>>>>> b26b6ee2f7935c32c032c1c266c382078e3f7381
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -61,6 +65,24 @@ ActiveRecord::Schema.define(version: 2021_01_26_120706) do
     t.integer "prix"
     t.integer "user_id"
     t.integer "category_id"
+    t.integer "location_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "city_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.datetime "comming_date"
+    t.datetime "leaving_date"
+    t.integer "user_id"
+    t.integer "house_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["house_id"], name: "index_reservations_on_house_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -75,6 +97,14 @@ ActiveRecord::Schema.define(version: 2021_01_26_120706) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+=======
+  add_foreign_key "houses", "categories"
+  add_foreign_key "houses", "locations"
+  add_foreign_key "houses", "users"
+  add_foreign_key "reservations", "houses"
+  add_foreign_key "reservations", "users"
+>>>>>>> b26b6ee2f7935c32c032c1c266c382078e3f7381
 end

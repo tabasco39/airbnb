@@ -1,0 +1,5 @@
+<%= form_for ([@house, @reservation]) do |f| %>
+    Coming date: <%= f.date_field :comming_date %>
+    Leaving date: <%= f.date_field :leaving_date %>
+    <%= f.submit %>
+<% end %>
