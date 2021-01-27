@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_scope :user do  
+    get '/users/sign_out' => 'devise/sessions#destroy'     
+ end
+ 
   root to: 'public#index'
   resources :houses do
-    resources :reservations
+  resources :reservations
   end
   resources :categories, only: [:show, :index]
   resources :locations, only: [:show, :index]

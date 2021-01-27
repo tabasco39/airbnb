@@ -12,7 +12,10 @@ class ReservationsController < ApplicationController
         @reservation.house = @house
         @user = current_user
         @reservation.user = @user
-        @reservation.save
+        if  @reservation.save
+            redirect_to house_path(@house)
+        end
+        
         
     end
     def edit
