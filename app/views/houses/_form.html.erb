@@ -46,7 +46,7 @@
             </div>
             <div class='form-group'>
                  <%= f.label :location  %>
-                <%= f.select :location_id,Location.all.map  {|l| [l.city_name,l.id]},class:'form-control'  %>
+                <%= f.select :location_id, Location.all.map  {|l| [l.city_name,l.id]},class:'form-control'  %>
             </div>
             <div class='form-group'>
                 <%= f.label :nombre_de_chambre  %>
