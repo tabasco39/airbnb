@@ -11,3 +11,10 @@
 # Category.create(name: "jacouzi")
 # Category.create(name: "Camping")
 
+
+# Location.create(city_name: "Antsiranana")
+# Location.create(city_name: "Antananarivo")
+# Location.create(city_name: "Mahajanga")
+# Location.create(city_name: "Tamatave")
+# Location.create(city_name: "Toliara")
+# Location.create(city_name: "fianarantsoa")

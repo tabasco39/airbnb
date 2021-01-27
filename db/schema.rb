@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_26_184133) do
+ActiveRecord::Schema.define(version: 2021_01_27_071244) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 2021_01_26_184133) do
     t.integer "prix"
     t.integer "user_id"
     t.integer "category_id"
+    t.integer "location_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "city_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -58,6 +65,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_184133) do
   end
 
   add_foreign_key "houses", "categories"
+  add_foreign_key "houses", "locations"
   add_foreign_key "houses", "users"
   add_foreign_key "reservations", "houses"
   add_foreign_key "reservations", "users"
