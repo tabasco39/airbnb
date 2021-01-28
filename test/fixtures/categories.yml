@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  logement_entier: MyString
+  logement_unique: MyString
+  Jacuzzi: MyString
+  camping: MyString
+
+two:
+  logement_entier: MyString
+  logement_unique: MyString
+  Jacuzzi: MyString
+  camping: MyString

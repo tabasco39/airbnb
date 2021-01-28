@@ -1,0 +1,5 @@
+<p> <%= @location.city_name %></p>
+
+<% @location.houses.each do |house| %>
+    <%= house.nom  %>
+<% end %>

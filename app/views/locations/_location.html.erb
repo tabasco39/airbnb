@@ -1,0 +1,8 @@
+<div>
+<h1 >LOCATIONS</h1>
+
+<% @location.each do |location| %>
+<p><%= location.city_name %></p>  
+<%= link_to 'Show', location %>
+<% end %>
+</div>

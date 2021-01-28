@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
-  resources :houses
+  devise_for :users
+  devise_scope :user do  
+    get '/users/sign_out' => 'devise/sessions#destroy'     
+ end
+ 
+  root to: 'public#index'
+  resources :houses do
+  resources :reservations
+  end
+  resources :categories, only: [:show, :index]
+  resources :locations, only: [:show, :index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

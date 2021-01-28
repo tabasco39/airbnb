@@ -1,0 +1,22 @@
+
+      
+    <nav class="navbar navbar-dark fixed-top bg-dark">
+    <div class='container'>
+      <div class='float-right'>
+          <% if user_signed_in? %>
+            <%= link_to 'Logout',destroy_user_session_path,:method => :delete %>
+            <%= link_to 'Devenir hébergeur',new_house_path,class:'btn btn-outline-primary' %>
+            <%= link_to 'Category', categories_path %>
+            <%= link_to 'Location', locations_path %>
+          <% else %>  
+            <%= link_to 'signup',new_user_registration_path %>
+            <%= link_to 'Login',new_user_session_path %>
+
+          <% end %>  
+       </div> 
+            <a class="navbar-brand" href="#">Fixed navbar</a>
+    </div>        
+      
+     
+      </div>
+    </nav>  
