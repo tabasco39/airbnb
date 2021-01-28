@@ -1,0 +1,34 @@
+<div class='container-fluid location'>
+    <div class='row'>
+        <h1 style='margin:40px 0px 50px 50px'>Quels destinations vous aimerez ?</h1>
+    </div> 
+    <div class='row'>
+        <div class='col-4' style="display:flex">
+            <%= image_tag('flower.jpeg',height:'150',width:'200',style:'margin:10px;border-radius:25px') %>
+             <p style='margin:30px 10px 10px 10px'><%= link_to @location.first.city_name,location_path(1) %></p>
+        </div>
+        <div class='col-4' style="display:flex">
+            <%= image_tag('car.jpeg',height:'150',width:'200',style:'margin:10px;border-radius:25px') %>
+            <p style='margin:30px 10px 10px 10px'><%= link_to @location.find(2).city_name,location_path(2) %></p>
+        </div>
+        <div class='col-4' style="display:flex">
+            <%= image_tag('images.jpeg',height:'150',width:'200',style:'margin:10px;border-radius:25px') %>
+            <p style='margin:30px 10px 10px 10px'><%= link_to @location.find(3).city_name,location_path(3) %></p>
+        </div>
+        <div class='col-4' style="display:flex">
+            <%= image_tag('index.jpeg',height:'150',width:'200',style:'margin:10px;border-radius:25px') %>
+            <p style='margin:30px 10px 10px 10px'><%= link_to @location.find(4).city_name,location_path(4) %></p>
+        </div>
+        <div class='col-4' style="display:flex">
+            <%= image_tag('kitro.jpeg',height:'150',width:'200',style:'margin:10px;border-radius:25px') %>
+            <p style='margin:30px 10px 10px 10px'><%= link_to @location.find(5).city_name,location_path(5) %></p>
+        </div>
+        <div class='col-4' style="display:flex">
+            <%= image_tag('mer.jpeg',height:'150',width:'200',style:'margin:10px;border-radius:25px') %>
+            <p style='margin:30px 10px 10px 10px'><%= link_to @location.find(6).city_name,location_path(6) %></p>
+        </div>
+       
+    </div>
+</div>
+
+<hr>
