@@ -10,14 +10,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
-   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+     <%= javascript_pack_tag 'app' %>
+     <%= javascript_pack_tag 'particles' %>
+  
   </head>
 
   <body>
-    <div>
-      <%= render 'navs/nav' %>
-    </div>  
-    <div class='container mt-5'>
+    
+     <%= render "layouts/nav" %>
+     
+    <div class='container' style="margin-top:100px">
       <%= yield %>
     </div>  
 

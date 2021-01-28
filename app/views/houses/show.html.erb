@@ -54,13 +54,16 @@
                
             </ul>
             <%= link_to 'Reserver','#',class:'btn btn-primary' %>
+         <div>
+            <%= @house.nom %>
+            <%= link_to 'Edit', edit_house_path(@house) %> |
+            <%= link_to 'Back', houses_path %>
+            <%= render @house.reservations %>
+            <%= render 'reservations/form' %>
+         </div>      
+
     
   </div> 
 
 
 
-<%= @house.nom %>
-<%= link_to 'Edit', edit_house_path(@house) %> |
-<%= link_to 'Back', houses_path %>
-<%= render @house.reservations %>
-<%= render 'reservations/form' %>

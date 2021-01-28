@@ -5,5 +5,6 @@ class LocationsController < ApplicationController
 
     def index
         @location = Location.all
+        @houses = House.all
     end
 end

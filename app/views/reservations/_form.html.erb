@@ -1,4 +1,4 @@
-<%= form_for ([@house, @reservation]) do |f| %>
+<%= form_for ([@house,@user, @reservation]) do |f| %>
     Coming date: <%= f.date_field :comming_date %>
     Leaving date: <%= f.date_field :leaving_date %>
     <%= f.submit %>

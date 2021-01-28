@@ -7,11 +7,14 @@ class ReservationsController < ApplicationController
         
     end
     def create
+        # @house = House.find(params[:house_id])
+        # @reservation = Reservation.new(reservation_params)
+        # @reservation.house = @house
+        # @user = current_user
+        # @reservation.user = @user
+        @reservation = current_user.reservations.new(reservation_params)
         @house = House.find(params[:house_id])
-        @reservation = Reservation.new(reservation_params)
-        @reservation.house = @house
-        @user = current_user
-        @reservation.user = @user
+        @reservation.house=@house
         if  @reservation.save
             redirect_to house_path(@house)
         end

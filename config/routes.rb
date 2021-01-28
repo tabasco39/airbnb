@@ -4,7 +4,10 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'     
  end
  
-  root to: 'public#index'
+  root to: 'homes#index'
+
+  resources :homes, only: [:show, :index]
+
   resources :houses do
   resources :reservations
   end
