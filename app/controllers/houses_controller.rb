@@ -13,7 +13,7 @@ class HousesController < ApplicationController
   # GET /houses/1.json
   def show 
     @house = House.find(params[:id])
-    @reservation = @house.reservations.new()
+    
   end
 
   # GET /houses/new

@@ -37,12 +37,7 @@
        
     </div>
 </div>                
-
-            <%# <% (0...@house.images.count).each do |image| 
-                <div style='width:300px;height:150px;margin:10px'>
-                <%= image_tag(@house.images[image],style:'width:300px; height:150px;border-radius:20px')  
-                </div>
-            <% end %>  
+  
   </div>
   <hr>
   <div class='container mt-5'>
@@ -53,12 +48,15 @@
                 <li>Prix/nuit: <%= @house.prix %> $</li>
                
             </ul>
-            <%= link_to 'Reserver','#',class:'btn btn-primary' %>
          <div>
-            <%= @house.nom %>
+            <%= @house.categorie%>
             <%= link_to 'Edit', edit_house_path(@house) %> |
             <%= link_to 'Back', houses_path %>
+            <h3>Reservations</h3>
             <%= render @house.reservations %>
+             
+            
+            <h3>Create a reservation</h3>
             <%= render 'reservations/form' %>
          </div>      
 
