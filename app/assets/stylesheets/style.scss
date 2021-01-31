@@ -38,8 +38,17 @@
 /* --------------------------
 :: 0.0 Form Sign in and up
 -------------------------- */
-.all {
-    background-image: image-url("bg-img/bg-1.jpg");
+.s-in {
+    background-image: image-url("bg-img/home-bg.jpg");
+    height: 960px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.s-up {
+    background-image: image-url("bg-img/welcome-bg.png");
     height: 960px;
     position: relative;
     z-index: 1;
@@ -48,7 +57,7 @@
 }
 
 .form-auth {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.6);
     width: 100%;
     max-width: 400px;
     padding: 30px;
@@ -381,7 +390,7 @@ p {
 .menu_area .navbar-brand {
     font-size: 72px;
     font-weight: 700;
-    color: #fff;
+    color: rgb(252, 252, 252);
     margin: 0;
     line-height: 1;
     padding: 0;
@@ -390,7 +399,7 @@ p {
 
 .menu_area .navbar-brand:hover,
 .menu_area .navbar-brand:focus {
-    color: #fff;
+    color: rgb(167, 92, 49);
 }
 
 
@@ -416,12 +425,12 @@ p {
     color: #fb397d;
 }
 
-.sing-up-button {
+.sign-up-button {
     text-align: right;
 }
 
-.sing-up-button > a {
-    background-color: #000;
+.sign-up-button > a {
+    background-color: rgb(36, 113, 165);
     color: #fff;
     font-weight: 500;
     display: inline-block;
@@ -432,9 +441,9 @@ p {
     border-radius: 0px 24px 0px 24px;
 }
 
-.sing-up-button > a:hover {
-    background: #fff;
-    color: #000;
+.sign-up-button > a:hover {
+    background: rgb(27, 89, 131);
+    color: #fff;
     border-color: transparent;
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
@@ -457,10 +466,10 @@ p {
 .header_area.sticky .menu_area .navbar-brand{
 	    color: rgb(40, 40, 40);
 }
-.header_area.sticky .sing-up-button > a{
+.header_area.sticky .sign-up-button > a{
 	color: #fff;
 }
-.header_area.sticky .sing-up-button > a:hover{
+.header_area.sticky .sign-up-button > a:hover{
 	color: #fff;
 }
 .header_area.sticky .menu_area .navbar-brand {
