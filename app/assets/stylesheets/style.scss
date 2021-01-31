@@ -1,6 +1,6 @@
 /* --------------------------
-:: Template Name: devdap App - Bit.app Landing Page 
 :: Template Author: devdap
+:: Template Name: devdap App - Bit.app Landing Page 
 :: Template Author URI: https://devdap.com/
 :: Description: devdap is a One Page based Ruby On Rails Bit Coin app Landing Template. It's very clean, creative & beautiful. It's super responsive & ultra light.
 :: Tags: devdap, Bit Coin app Landing, Apps, Responsive App Landing, Bootstrap 4, Free Theme, Free HTML Template, HTML5 Template etc,Ruby On Rails.
@@ -26,7 +26,7 @@
 :: 15.0 Verticle Scrollbar
 -------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Work+Sans:400,500');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Work+Sans:400,500');
 @import "bootstrap";
 @import "animate";
 @import "magnific-popup";
@@ -35,8 +35,49 @@
 @import "responsive";
 @import "font-awesome";
 
+/* --------------------------
+:: 0.0 Form Sign in and up
+-------------------------- */
+.all {
+    background-image: image-url("bg-img/bg-1.jpg");
+    height: 960px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+}
 
-
+.form-auth {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    margin: 150px auto;
+    border-radius: 10px;
+  }
+  .checkbox {
+    font-weight: 400;
+  }
+  .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-control:focus {
+    z-index: 2;
+  }
+  input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 
 /* --------------------------
 :: 1.0 Base CSS Start
@@ -48,7 +89,7 @@
 }
 
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Verdana';
     background-color: #fff;
 }
 
