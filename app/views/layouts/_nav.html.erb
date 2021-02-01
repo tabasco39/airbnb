@@ -8,12 +8,18 @@
 <% if user_signed_in? %>
 
         <div class="navigation2">
-            <ul>
-                <%= link_to 'Acceuil','#',class:'list' %>
-                <%= link_to 'Hébergement','#',class:'list' %>
-                <%= link_to 'Expériences', '#',class:'list' %>
-                <%= link_to 'deconnexion', destroy_user_session_path,class:'list' %>
-            </ul>
+
+            <div style="width:500px;margin:0 auto">
+                <ul>
+                    <%= link_to 'Acceuil','#',class:'list' %>
+                    <%= link_to 'Hébergement','#',class:'list' %>
+                    <%= link_to 'Expériences', '#',class:'list' %>
+                </ul>   
+            </div>  
+             
+                <%= link_to 'Deconnexion', destroy_user_session_path,class:'btn btn-warning',style:'height:50px;color:white;font-size:20px;margin:20px;border-radius:50px ' %>
+               
+            
 
         </div>
 
@@ -22,7 +28,7 @@
         <%= render 'layouts/background' %>
 
         <div class="navigation">
-            <ul>
+            <ul >
                 <%= link_to 'Acceuil','#',class:'list' %>
                 <%= link_to 'Hébergement','#',class:'list' %>
                 <%= link_to 'Expériences', '#',class:'list' %>
@@ -31,7 +37,7 @@
         </div>
 <% else %>        
         <div class="navigation2">
-            <ul>
+            <ul style='width:50%;margin:10px auto'>
                 <%= link_to 'Acceuil','#',class:'list' %>
                 <%= link_to 'Hébergement','#',class:'list' %>
                 <%= link_to 'Expériences', '#',class:'list' %>
