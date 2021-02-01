@@ -35,6 +35,30 @@
 @import "responsive";
 @import "font-awesome";
 
+.speciality-area {
+    background-image: image-url("bg-img/banner.png");
+}
+/* --------------------------
+:: 0.00 Form for new houses
+-------------------------- */
+.new-house {
+    background-image: image-url("bg-img/new_house.jpg");
+    height: 960px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.form-new-house {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    margin: -180px;
+    border-radius: 10px;
+}
+
 /* --------------------------
 :: 0.0 Form Sign in and up
 -------------------------- */

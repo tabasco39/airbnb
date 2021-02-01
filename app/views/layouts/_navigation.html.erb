@@ -1,7 +1,7 @@
 <!-- Preloader Start -->
-<%# <div id="preloader">
+<div id="preloader">
     <div class="devdap-load"></div>
-</div> %>
+</div>
 <%if user_signed_in?%>
 
     <header class="header_area animated">
@@ -38,31 +38,7 @@
         </div>
     </header>
 
-<% elsif current_page?(new_houses_path) %>
-    <div class="container-fluid">
-            <div class="row align-items-center">
-                <!-- Menu Area Start -->
-                <div class="col-12 col-lg-10">
-                    <div class="menu_area">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <!-- Logo -->
-                            <a class="navbar-brand" href="/">H.</a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                            <!-- Menu Area -->
-                            <div class="collapse navbar-collapse" id="ca-navbar">
-                                <ul class="navbar-nav ml-auto" id="nav">
-                                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
 <% else %>
-
 <!-- ***** Header Area Start ***** -->
     <header class="header_area animated">
         <div class="container-fluid">
