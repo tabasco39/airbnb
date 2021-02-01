@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comming-date: 2021-01-28
+  leaving_date: 2021-01-28
+  guest_name: MyString
+  house_owner: MyString
+
+two:
+  comming-date: 2021-01-28
+  leaving_date: 2021-01-28
+  guest_name: MyString
+  house_owner: MyString

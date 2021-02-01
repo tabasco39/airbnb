@@ -1,0 +1,49 @@
+<%= form_with(model: house) do |f| %>
+  <% if house.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(house.errors.count, "error") %> prohibited this house from being saved:</h2>
+
+      <ul>
+        <% house.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <div class='container'>
+          <div class=row>
+          <div class=col-6>
+          <h3>Caractéristiques du logement</h3>
+          <hr>  
+            <div class='form-group'>
+                <%= f.label :categorie  %>
+                <%= f.select :category_id,Category.all.map  {|c| [c.name,c.id]},class:'form-control'  %>
+            </div>
+            <div class='form-group'>
+                 <%= f.label :Region  %>
+                <%= f.select :location_id, Location.all.map  {|l| [l.city_name,l.id]},class:'form-control'  %>
+            </div>
+            <div class='form-group'>
+                <%= f.label :nombre_de_chambre  %>
+                <%= f.text_field :nombre_de_chambre,class:'form-control'  %>
+            </div>
+            <div class='form-group'>
+                <%= f.label :localisation  %>
+                <%= f.text_field :localisation,class:'form-control'  %>
+            </div>
+            <div class='form-group'>
+                <%= f.label :prix  %>
+                <%= f.text_field :prix,class:'form-control'  %>
+            </div>
+            <div class='form-group'>
+                <%= f.label :images  %>
+                <%= f.file_field :images,multiple:true,class:'form-control'  %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit class:'btn btn-primary'%>
+            </div>
+            </div>
+        </div>    
+      </div>      
+<% end %>

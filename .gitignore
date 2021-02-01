@@ -19,5 +19,12 @@
 
 /node_modules
 /yarn-error.log
+<<<<<<< HEAD
 
 .byebug_history
+=======
+yarn-debug.log*
+.yarn-integrity
+
+config/secrets.yml
+>>>>>>> 83bc9d9fdb3d63dd57a339556f862d2abee454e2
