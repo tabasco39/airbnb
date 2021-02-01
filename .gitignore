@@ -9,7 +9,7 @@
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
-/db/*.sqlite3-*
+/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -17,26 +17,14 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
-
-# Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
-
-/public/assets
-.byebug_history
-
-# Ignore master key for decrypting credentials and more.
-/config/master.key
-
-/public/packs
-/public/packs-test
 /node_modules
 /yarn-error.log
+<<<<<<< HEAD
 yarn-debug.log*
 .yarn-integrity
 
 config/secrets.yml
+=======
+
+.byebug_history
+>>>>>>> 47dcd1a141f7675a3645d91e790d7e06d39e30ca

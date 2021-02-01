@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="devise">
       <h2>Sign up</h2>
 
@@ -39,3 +40,29 @@
 
       <%= render "devise/shared/links" %>
 </div>    
+=======
+<section class="s-up">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">            
+                  <div class="form-auth text-center">
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <h2>Register</h2><br>
+                      <%= render "devise/shared/error_messages", resource: resource %>
+
+                        <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+                        <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+                        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
+                        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password confirmation" %>
+
+                      <br>
+                      <div class="actions">
+                        <%= f.submit "Sign up", class: "btn btn-lg btn-primary btn-block" %>
+                      </div>
+                      <br>
+
+                    <% end %>
+                    <%= render "devise/shared/links" %>
+</section>
+>>>>>>> 47dcd1a141f7675a3645d91e790d7e06d39e30ca
