@@ -29,15 +29,10 @@ gem 'coffee-rails', '~> 4.2'
 gem "font-awesome-rails"
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-<<<<<<< HEAD
-gem 'jbuilder', '~> 2.5'
-=======
 gem 'jbuilder', '~> 2.7'
 
 gem 'mini_magick'
 
-gem 'devise'
->>>>>>> 83bc9d9fdb3d63dd57a339556f862d2abee454e2
 # Use Redis adapter to run Action Cable in production
 
 gem 'devise'

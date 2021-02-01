@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_01_30_162838) do
 
   create_table "accounts", force: :cascade do |t|
@@ -35,8 +34,7 @@ ActiveRecord::Schema.define(version: 2021_01_30_162838) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_accounts_on_email", unique: true
     t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
-=======
-ActiveRecord::Schema.define(version: 2021_01_28_174343) do
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -71,29 +69,11 @@ ActiveRecord::Schema.define(version: 2021_01_28_174343) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "houses_count", default: 0
->>>>>>> 83bc9d9fdb3d63dd57a339556f862d2abee454e2
   end
 
   create_table "houses", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-<<<<<<< HEAD
-  end
-
-  create_table "properties", force: :cascade do |t|
-    t.integer "account_id"
-    t.string "name"
-    t.string "address"
-    t.integer "price"
-    t.integer "rooms"
-    t.integer "bathrooms"
-    t.string "photo"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["account_id"], name: "index_properties_on_account_id"
-  end
-
-=======
     t.string "categorie"
     t.integer "nombre_de_chambre"
     t.string "localisation"
@@ -116,6 +96,19 @@ ActiveRecord::Schema.define(version: 2021_01_28_174343) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.integer "account_id"
+    t.string "name"
+    t.string "address"
+    t.integer "price"
+    t.integer "rooms"
+    t.integer "bathrooms"
+    t.string "photo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_properties_on_account_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -152,5 +145,4 @@ ActiveRecord::Schema.define(version: 2021_01_28_174343) do
   add_foreign_key "houses", "users"
   add_foreign_key "reservations", "houses"
   add_foreign_key "reservations", "users"
->>>>>>> 83bc9d9fdb3d63dd57a339556f862d2abee454e2
 end
