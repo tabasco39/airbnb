@@ -22,7 +22,7 @@
                                     <li class="nav-item"><a class="nav-link" href="#features">Why H. app?</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                                    
+                                    <%= link_to 'Your house', houses_path, class: "nav-link" %>
                                 </ul>
                             </div>
                         </nav>
@@ -58,6 +58,7 @@
                                     <li class="nav-item"><a class="nav-link" href="#features">Why H. app?</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                    <%= link_to 'Create house', new_house_path, class: "nav-link" %>
                                     <%= link_to 'Sign in', new_user_session_path, class: "nav-link" %>
                                 </ul>
                             </div>
