@@ -7,4 +7,6 @@ class User < ApplicationRecord
   after_create :create_profile
   has_many :houses       
   has_many :reservations
+
+ 
 end
