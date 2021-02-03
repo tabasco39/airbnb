@@ -34,10 +34,21 @@
 @import 'slick';
 @import "responsive";
 @import "font-awesome";
-
-.speciality-area {
-    background-image: image-url("bg-img/banner.png");
+/* --------------------------
+:: -0.01 CARD HOMEPAGE
+-------------------------- */
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 50px; /* Added */
 }
+
+.card:hover {
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);;
+}
+
 /* --------------------------
 :: 0.00 Form for new houses
 -------------------------- */
