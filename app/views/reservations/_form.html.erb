@@ -1,11 +1,11 @@
 <%= form_with model: [ @house, @house.reservations.build ] do |f| %>
   <p>
-    <%= f.label :comming_date %><br>
-    <%= f.date_field :comming_date, min: Date.today %>
+    <%= f.label :start_time %><br>
+    <%= f.date_field :start_time, min: Date.today %>
   </p>
   <p>
-    <%= f.label :leaving_date %><br>
-    <%= f.date_field :leaving_date, min: Date.today %>
+    <%= f.label :end_time %><br>
+    <%= f.date_field :end_time, min: Date.today %>
   </p>
   <p>
     <%= f.submit %>
