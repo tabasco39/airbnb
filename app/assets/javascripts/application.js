@@ -18,6 +18,7 @@
 //= require jquery.slick
 //= require footer-reveal
 //= require active
+//= require leaflet
 
 
 

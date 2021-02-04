@@ -271,6 +271,9 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
+
+  config.omniauth :facebook, '3693672430678438', '5ffb203c98cbf51dbe52625b3a62af62', token_params: { parse: :json }
+  
    #config.omniauth :facebook, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   # ==> Warden configuration

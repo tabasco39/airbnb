@@ -25,12 +25,15 @@ gem "font-awesome-rails"
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'
 
-
+gem 'leaflet-rails'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'mini_magick'
 
-gem 'devise'
+gem 'devise', github: 'heartcombo/devise', branch: 'ca-omniauth-2'
+gem 'omniauth-facebook'
+gem 'omniauth'
+gem 'omniauth-rails_csrf_protection'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

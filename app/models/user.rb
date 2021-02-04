@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :houses       
   has_many :reservations
 
- 
+  devise :omniauthable, omniauth_providers: %i[facebook]
 end
+                                                                                                                                                                                                                                                                                                                                                                                                                                          

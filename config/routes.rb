@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controller => {
+    :omniauth_callbacks => 'users/omniauth_callbacks#facebook'
+  }
    
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'     
