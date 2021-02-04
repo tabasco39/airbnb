@@ -47,6 +47,17 @@
             <%= link_to 'Edit', edit_house_path(@house) %> |
             <%= link_to 'Back', houses_path %>
             <h3>Reservations</h3>
+            <%= month_calendar events: @house.reservations do |date, reservations| %>  
+                <%= date %>  
+
+                <% reservations.each do |reservation| %>  
+                    <div>  
+                        <%= reservation.guest_name %> 
+                    </div>  
+                <% end %>  
+
+            <% end %>
+           
             <%= render @house.reservations %>
              
             
