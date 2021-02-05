@@ -1,0 +1,11 @@
+
+<br>
+
+<%= form_tag('/index', method: 'get') do %>
+        <%= label_tag(:categorie, "Categorie:") %>
+        <%= select_tag(:category_id, Category.all.map  {|c| [c.name,c.id]},class:'form-control') %>
+        <%= label_tag(:location_id, "Region") %>
+        <%= select_tag(:location_id, Location.all.map {|c| [c.city_name,c.id]},class:'form-control') %>
+        <%= submit_tag("filtrer") %>
+<% end %>
+<br><br><br><br><br>
