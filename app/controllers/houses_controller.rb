@@ -5,8 +5,14 @@ class HousesController < ApplicationController
   # GET /houses
   # GET /houses.json
   def index
-    @houses = House.all
     
+    if params[:category_id].present? || params[:location_id].present?
+      houses1 = House.where(category_id: params[:category_id] )
+      @houses = houses1.where(location_id: params[:location_id])
+    else
+      @houses = House.all
+    end
+
   end
 
   # GET /houses/1

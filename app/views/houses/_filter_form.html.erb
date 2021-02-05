@@ -1,11 +1,12 @@
 
 <br>
 
-<%= form_tag('/index', method: 'get') do %>
-        <%= label_tag(:categorie, "Categorie:") %>
-        <%= select_tag(:category_id, options_for_select(Category.all.map  {|c| [c.name,c.id]},class:'form-control')) %>
-        <%= label_tag(:loc, "Region") %>
-        <%= select_tag(:location_id, options_for_select(Location.all.map {|c| [c.city_name,c.id]},class:'form-control')) %>
-        <%= submit_tag("filtrer") %>
+<%= form_tag('/houses', method: 'get') do %>
+        <%= label_tag :categorie, "Categorie:" %>
+        <%= select_tag :category_id, options_for_select(Category.all.map  {|c| [c.name,c.id]},class:'form-control') %>
+        <%= label_tag :location, "Region" %>
+        <%= select_tag :location_id, options_for_select(Location.all.map {|c| [c.city_name,c.id]},class:'form-control') %>
+        <%= submit_tag "filtrer" %>
 <% end %>
+<%= params %>
 <br><br><br><br><br>
