@@ -62,8 +62,27 @@
     background-size: cover;
 }
 
-.container-house {
-    min-height: 100%;
+.containera {
+    background-image: image-url("bg-img/form_location.jpg");
+    height: 960px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.form-new-house-loca {
+    background: rgba( 255, 255, 255, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba(34, 35, 46, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 100%;
+    max-width: 400px;
+    margin-top: 50px;
+    padding: 30px ;
+    color: rgb(63, 63, 63);
 }
 /* --------------------------
 :: 0.00 Form for new houses
