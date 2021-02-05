@@ -55,10 +55,10 @@
 -------------------------- */
 .show_house {
     background-image: image-url("bg-img/banner.png");
-    height: 960px;
-    position: relative;
+    height: 360px;
+    
     z-index: 1;
-    background-position: bottom center;
+    background-position: top center;
     background-size: cover;
 }
 
