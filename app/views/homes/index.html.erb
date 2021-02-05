@@ -4,11 +4,11 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12 col-md">
                     <div class="wellcome-heading">
-                        <h2>Find Your Home ...</h2>
-                        <h3>Home</h3>
-                        <p>Get started, free & secure</p>
+                        <h2>Welcome !</h2><br>
+                        <h3>HOME</h3>
+                        <h4 style="color:#fff; font-size:32px;">Find what you want for your vacation here.</h4>
                     </div>
-                    <div class="get-start-area">
+                    <%# <div class="get-start-area">
                         <!-- Form Start -->
                         <form action="" method="post" class="form-inline">
                             <input type="email" class="form-control email" placeholder="name@company.com">
@@ -16,14 +16,14 @@
                         </form>
                         <!-- Form End -->
                         
-                    </div>
+                    </div> %>
                 </div>
             </div>
         </div>
-        <!-- Welcome thumb 
+        <!-- Welcome thumb -->
         <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s">
-            <%=image_tag("bg-img/welcome-img.png", alt: "")%>
-        </div> -->
+            <%=image_tag("bg-img/app_home.png", alt: "")%>
+        </div> 
     </section>
     <!-- ***** Wellcome Area End ***** -->
         <div class="container" style='background:white'>
@@ -43,13 +43,13 @@
                 <div class="col-12">
                     <!-- Section Heading Area -->
                     <div class="section-heading text-center">
-                        <h2>Latest</h2>
+                        <h2>Latest news</h2>
                         <div class="line-shape"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row">               
                 <!-- Single Special Area -->
                 <div class="col-12 col-md-4">
                     <div class="single-special text-center wow fadeInUp" data-wow-delay="0.2s">
@@ -57,7 +57,7 @@
                             <i class="fa fa-home" aria-hidden="true"></i>
                         </div>
                         <h4>Search Home</h4>
-                        <p>Choose here your favourite home.</p>
+                        <p>Choose your favourite home.</p>
                     </div>
                 </div>
                 <!-- Single Special Area -->
@@ -82,32 +82,100 @@
                 </div>
             </div>
         </div>
+
+        <!-- CARDS -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <%=image_tag("bg-img/tana.jpeg", alt: "")%>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Antananarivo</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <%=image_tag("card/janga.jpg", alt: "")%>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mahajanga</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <%=image_tag("card/tamatave.jpg", alt: "")%>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Toamasina</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <%=image_tag("card/tamatave.jpg", alt: "")%>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Toliara</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <%=image_tag("card/tamatave.jpg", alt: "")%>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Fianarantsoa</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <%=image_tag("card/tamatave.jpg", alt: "")%>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Antsiranana</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Special Description Area -->
         <div class="special_description_area mt-150">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="special_description_img">
-                        <%=image_tag("bg-img/bg-app.jpg", alt: "")%>
+                        <%=image_tag("bg-img/app_mockup.png", alt: "")%>
                            
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="special_description_content">
                             <h2>You can download our application, it's FREE</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore.</p>
+                            <p>A mobile application, also referred to as a mobile app or simply an app, is a computer program or software application designed to run on a mobile device such as a phone, tablet, or watch.</p>
+                            <p>Click on the Apple Store icon to download the TAL Travel App from the Apple App Store to your smartphone or on the Google Play Store icon.</p>
+                            <p>Download Our App. Now there's a faster and easier way to pay your bill, get insights on energy usage.</p>
                             <div class="app-download-area">
                                 <div class="app-download-btn wow fadeInUp" data-wow-delay="0.2s">
                                     <!-- Google Store Btn -->
-                                    <a href="#">
+                                    <a target="_blank" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj9o-WV8tDuAhVhRTABHQTuA9kQFjAAegQIChAC&url=https%3A%2F%2Fstore.google.com%2F&usg=AOvVaw0JKNCJ2lcIb7H2LDLizew0">
                                         <i class="fa fa-android"></i>
-                                        <p class="mb-0"><span>available on</span> Google Store</p>
+                                        <p class="mb-0"><span>available on</span> Google Store </p>
                                     </a>
                                 </div>
                                 <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
                                     <!-- Apple Store Btn -->
-                                    <a href="#">
+                                    <a target="_blank" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjhz6St8tDuAhW9TjABHauiA1wQFjAPegQIHRAC&url=https%3A%2F%2Fwww.apple.com%2Fapp-store%2F&usg=AOvVaw1Lcoy66QyqCeLXr3v7zX_r">
                                         <i class="fa fa-apple"></i>
                                         <p class="mb-0"><span>available on</span> Apple Store</p>
                                     </a>
@@ -128,7 +196,7 @@
                 <div class="col-12">
                     <!-- Heading Text -->
                     <div class="section-heading text-center">
-                        <h2>Why H. app?</h2>
+                        <h2>Why you choose H. app?</h2>
                         <div class="line-shape"></div>
                     </div>
                 </div>
@@ -140,7 +208,7 @@
                     <div class="single-feature">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <h5>Direct Bank Deposit</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                        <p>The facility can be used for payments for any purpose, such as payment of bills, taxes, and other...</p>
                     </div>
                 </div>
                 <!-- Single Feature Start -->
@@ -148,7 +216,7 @@
                     <div class="single-feature">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                         <h5>Keep more of your money.</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                        <p>You can make the most of your money comparison shopping, ensuring that you’re paying the lowest prices for products and services.</p>
                     </div>
                 </div>
                 <!-- Single Feature Start -->
@@ -156,7 +224,7 @@
                     <div class="single-feature">
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
                         <h5>Sell to anyone, anywhere.</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                        <p>It's packed with simple, timeless principles that are applicable to any product. Any service. Anywhere. It's a must-read for anyone that wants to sell something.</p>
                     </div>
                 </div>
                 <!-- Single Feature Start -->
@@ -172,7 +240,7 @@
                     <div class="single-feature">
                         <i class="fa fa-bitcoin" aria-hidden="true"></i>
                         <h5>Cryptographically Secure API</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                        <p>Two-factor authentication is an extra layer of security for your account. Instead of only entering a password to log in, you'll also enter a code</p>
                     </div>
                 </div>
                 <!-- Single Feature Start -->
@@ -180,7 +248,7 @@
                     <div class="single-feature">
                         <i class="fa fa-headphones" aria-hidden="true"></i>
                         <h5>24/7 Online Support</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                        <p>24/7 customer support means customers can get help and find answers to questions as soon as they come up—24/7 and in real-time.</p>
                     </div>
                 </div>
             </div>
@@ -230,7 +298,7 @@
                         </div>
                         <div class="cool-facts-content">
                             <i class="fa fa-smile-o"></i>
-                            <p>HAPPY <br> Clients</p>
+                            <p>HAPPY<br>CLIENTS</p>
                         </div>
                     </div>
                 </div>
@@ -264,7 +332,7 @@
     <!-- ***** Cool Facts Area End ***** -->
 
     <!-- ***** App Screenshots Area Start ***** -->
-    <section class="app-screenshots-area bg-white section_padding_0_100 clearfix" id="screenshot">
+    <%# <section class="app-screenshots-area bg-white section_padding_0_100 clearfix" id="screenshot">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -284,7 +352,7 @@
                         <div class="single-shot">
                             
                             <%=image_tag("scr-img/1.png", alt: "")%>
-                        </div>
+                        <!-- </div>
                         <div class="single-shot">
                             <%=image_tag("scr-img/2.png", alt: "")%>
                         </div>
@@ -304,7 +372,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ***** App Screenshots Area End *****====== -->
 
    
@@ -330,9 +398,8 @@
                     <div class="single-price-plan text-center">
                         <!-- Package Text  -->
                         <div class="package-plan">
-                            <h5>Basic Plan</h5>
+                            <h5>Basic</h5>
                             <div class="ca-price d-flex justify-content-center">
-                                
                                 <h4>FREE</h4>
                             </div>
                         </div>
@@ -354,11 +421,10 @@
                     <div class="single-price-plan active text-center">
                         <!-- Package Text  -->
                         <div class="package-plan">
-                            <h5>Business Plan</h5>
+                            <h5>Business</h5>
                             <div class="ca-price d-flex justify-content-center">
-                               <span>$</span>
-                                <h4>200</h4>
-								 
+                               <span>MGA </span>
+                                <h4>200 000</h4>
                             </div>
                         </div>
                         <div class="package-description">
@@ -406,7 +472,7 @@
                             </div>
                             <div class="client-name text-center">
                                 <h5>Lily Hannah</h5>
-                                <p>Brand Ambassador</p>
+                                <p>Recently rent a home</p>
                             </div>
                         </div>
                         <!-- Client Feedback Text  -->
@@ -446,7 +512,7 @@
                             </div>
                             <div class="client-name text-center">
                                 <h5>Charlotte Helen</h5>
-                                <p>Freelance Marketer</p>
+                                <p>Client</p>
                             </div>
                         </div>
                         <!-- Client Feedback Text  -->
@@ -466,7 +532,7 @@
                             </div>
                             <div class="client-name text-center">
                                 <h5>Emma</h5>
-                                <p>Ceo-Founder</p>
+                                <p>Client</p>
                             </div>
                         </div>
                     </div>
@@ -506,7 +572,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="get-started-button wow bounceInDown" data-wow-delay="0.5s">
-                        <a href="#">Get Started</a>
+                        <%= link_to "Get Stared", new_user_registration_path %>
                     </div>
                 </div>
             </div>
@@ -521,7 +587,7 @@
                 <div class="col-12 text-center">
                     <!-- Heading Text  -->
                     <div class="section-heading">
-                        <h2>Our Team</h2>
+                        <h2>Team membership</h2>
                         <div class="line-shape"></div>
                     </div>
                 </div>
@@ -530,13 +596,13 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <%=image_tag("team-img/team-1.jpg", alt: "")%>
+                            <%=image_tag("team-img/lanto.jpg", alt: "")%>
                             <div class="team-hover-effects">
                                 <div class="team-social-icon">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100004872437711"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <%# <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a> %>
                                 </div>
                             </div>
                         </div>
@@ -549,13 +615,13 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <%=image_tag("team-img/team-2.jpg", alt: "")%>
+                            <%=image_tag("team-img/mathieu.jpg", alt: "")%>
                             <div class="team-hover-effects">
                                 <div class="team-social-icon">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/aina.mathieu.5"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <%# <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a> %>
                                 </div>
                             </div>
                         </div>
@@ -568,13 +634,13 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <%=image_tag("team-img/team-3.jpg", alt: "")%>
+                            <%=image_tag("team-img/antsa.jpg", alt: "")%>
                             <div class="team-hover-effects">
                                 <div class="team-social-icon">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/antsafranco"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <%# <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a> %>
                                 </div>
                             </div>
                         </div>
@@ -588,13 +654,13 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <%=image_tag("team-img/team-4.jpg", alt: "")%>
+                            <%=image_tag("team-img/nandrian.jpg", alt: "")%>
                             <div class="team-hover-effects">
                                 <div class="team-social-icon">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/nandrianina.ranarivony/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <%# <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a> %>
                                 </div>
                             </div>
                         </div>
@@ -635,7 +701,7 @@
                 <div class="col-md-6">
                     <!-- Form Start-->
                     <div class="contact_from">
-                        <form action="#" method="post">
+                        <form action="#" method="">
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div class="row">
