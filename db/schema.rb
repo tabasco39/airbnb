@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_03_193235) do
+ActiveRecord::Schema.define(version: 2021_02_04_063933) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -67,6 +67,17 @@ ActiveRecord::Schema.define(version: 2021_02_03_193235) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "notifications", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "recipient_id"
+    t.string "action"
+    t.string "notifiable_type"
+    t.integer "notifiable_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.string "adresse"
     t.integer "contact"
@@ -110,6 +121,7 @@ ActiveRecord::Schema.define(version: 2021_02_03_193235) do
   add_foreign_key "houses", "categories"
   add_foreign_key "houses", "locations"
   add_foreign_key "houses", "users"
+  add_foreign_key "notifications", "users"
   add_foreign_key "reservations", "houses"
   add_foreign_key "reservations", "users"
 end

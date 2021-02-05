@@ -30,9 +30,20 @@
                 </div>
                 <!-- Signup btn -->
                 <div class="col-12 col-lg-2">
-                    <div class="sign-up-button d-none d-lg-block">
-                        <%= link_to "Log out", destroy_user_session_path %>
-                    </div>
+
+                          <div class="dropdown">
+                                <button type="button" class="btn btn-primary " data-toggle="dropdown" style='border-radius:0 15px 0 15px'>
+                                 Your account
+                                </button>
+                                <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Edit account</a>
+                                        <a class="dropdown-item" href="#">Dashboard</a>
+                                        <%= link_to "Log out", destroy_user_session_path,class:"dropdown-item" %>
+                                        <div class="dropdown-divider"></div>
+                                
+                                </div>
+                            </div>
+
                 </div>
             </div>
         </div>

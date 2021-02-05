@@ -23,7 +23,7 @@ gem 'wow-rails'
 gem "jquery-slick-rails"
 gem "font-awesome-rails"
 gem 'jquery-rails'
-gem 'coffee-rails', '~> 4.2'
+
 
 gem 'leaflet-rails'
 gem 'geocoder'
@@ -38,7 +38,7 @@ gem 'omniauth-rails_csrf_protection'
 gem "simple_calendar", "~> 2.0"
 
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+ gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

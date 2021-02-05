@@ -1,17 +1,20 @@
-<div class='container mt-5 pt-5' style='display:flex'> 
+
+<br><br>
+<div class='container mt-5 pt-5' style='display:flex;background:white'> 
         
-    <div class="row">
-        
-             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="row" style='width:100%'>
+         
+        <div class="col-6 single-special  wow fadeInUp" data-wow-delay="0.2s">
+            <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
                 <div class="carousel-inner">
                     <% (0...@house.images.count).map do |image|   %>
                    
-                   <% if (image === 0) %>
+                    <% if (image === 0) %>
                        <div class="carousel-item active">
                             <%= image_tag(@house.images[image],width:"500",height:"300") %>
                         </div>
                         <% else %>
-                         <div class="carousel-item ">
+                        <div class="carousel-item ">
                             <%= image_tag(@house.images[image],width:"500",height:"300") %>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -23,58 +26,40 @@
                             <span class="sr-only">Next</span>
                         </a>
 
-                   <% end %>
-              <% end %> 
-            </div>
-               
-            </div>      
-       
-    </div>
-</div>                
-  
-  </div>
-  <hr>
-  <div class='container mt-5'>
-            <h3><b><%= @house.category.name %></b></h3>
-            <ul>
-                <li>Localisation: <%= @house.localisation %></li>
-                <li>Nombre de chambre: <%= @house.nombre_de_chambre %></li>
-                <li>Prix/nuit: <%= @house.prix %> $</li>
-               
-            </ul>
-         <div>
-            <%= @house.categorie%>
-            <%= link_to 'Edit', edit_house_path(@house) %> |
-            <%= link_to 'Back', houses_path %>
-            <h3>Reservations</h3>
-            <%= month_calendar events: @house.reservations do |date, reservations| %>  
-                <%= date %>  
-
-                <% reservations.each do |reservation| %>  
-                    <div>  
-                        <%= reservation.guest_name %> 
-                    </div>  
-                <% end %>  
-
-            <% end %>
-           
-            <%= render @house.reservations %>
-             
-            
-            <h3>Create a reservation</h3>
-            <%= render 'reservations/form' %>
-         </div>      
-
-    
-  </div> 
-
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
+                    <% end %>
+                    <% end %> 
+                </div>
+             </div> 
+  <br>                      
+  <hr> 
+  <br>
+                            <h3><b><%= @house.category.name %></b></h3>
+                            <ul>
+                                <li>Localisation: <%= @house.localisation %></li>
+                                <li>Nombre de chambre: <%= @house.nombre_de_chambre %></li>
+                                <li>Prix/nuit: <%= @house.prix %> $</li>
+                            
+                            </ul>
+                             <div>
+                             <%#   <%= @house.categorie
+                                <%= link_to 'Edit', edit_house_path(@house)  |
+                                <%= link_to 'Back', houses_path  %> 
+                                   
+                                <%= render 'reservations/form' %>
+                            </div>   
+            </div> 
+         
+                            <div class='col-6'>
+                            <div id="map" style=' height: 100%;background:grey' ></div>
+        </div>     
+</div>      
+<hr>
+<br>
+<br>
 
 
 
-
-  <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key="AIzaSyCUWaMMCPH78xqybhSGAYRPjQo7HJi9mBo"'></script>
+  <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js'></script>
   
   <script type='text/javascript'>
         function initialize(){
@@ -91,7 +76,40 @@
 </div> 
 
 
+<div class="container" style='background-color:white' >
+         
+    <div class="row" style='padding-top:80px'>
+                <div class="col-12">
+                    <!-- Section Heading Area -->
+                    <div class="section-heading text-center">
+                        <h2>Booking calendar</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+    <div class="row">   
+        <div  style='margin:0 auto'>
+                <%= month_calendar events: @house.reservations do |date, reservations| %>  
+                        
+                      
+                        <%= date %>  
 
- 
+                        <% reservations.each do |reservation| %>  
+                            <div style='color:red;font-weight:bold;text-transform:uppercase' >  
+                                
+                                <%=  reservation.guest_name %> 
+                            </div>  
+                        <% end %>  
+
+                        <% end %>
+            
+        </div>
+    </div>     
+
+</div>
+
+
+ <div id="notifications">
+</div>
 
 

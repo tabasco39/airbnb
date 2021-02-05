@@ -10,7 +10,7 @@
 
                       <label for="InputEmail" class="sr-only">Email address</label>
                         <%= f.email_field :email, autofocus: true, class: "form-control", id: "InputEmail", placeholder: "Email address", autocomplete: "email" %>
-
+                      <br>
                       <label for="InputPassword" class="sr-only">Password</label>
                         <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control", id: "InputPassword" %>
 
@@ -27,7 +27,7 @@
 
                     <% end %>
                     <br>
-                    <%= link_to 'Facebook', user_facebook_omniauth_authorize_path ,method: :post %>
+                    
                     <%= render "devise/shared/links" %>
                   </div>
                 </div>

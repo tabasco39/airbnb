@@ -1,13 +1,26 @@
-<%= form_with model: [ @house, @house.reservations.build ] do |f| %>
-  <p>
-    <%= f.label :start_time %><br>
-    <%= f.date_field :start_time, min: Date.today %>
-  </p>
-  <p>
-    <%= f.label :end_time %><br>
-    <%= f.date_field :end_time, min: Date.today %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+
+             
+                <%= form_with model: [ @house, @house.reservations.build ] do |f| %>
+                  <div class="card" style="width: 18rem;margin-top: 50px;border-radius:20px;box-shadow:0px 2px 4px grey;padding:10px">
+                      <div class="card-head" >
+                      <br>
+                         <h4 style='color:#fb397d;margin-bottom:20px'>Reservation</h4>
+                      </div>
+                        <p>
+                          <%= f.label :start_time %><br>
+                          <%= f.date_field :start_time, min: Date.today,class:'form-control' %>
+                        </p>
+                        <p>
+                          <%= f.label :end_time %><br>
+                          <%= f.date_field :end_time, min: Date.today,class:'form-control' %>
+                        </p>
+                        <p>
+                          <%= f.submit class:'btn btn-primary',style:'background-color:#fb397d;border:#fb397d;margin-top:25px'%> 
+                          <br>
+                        </p> 
+                  </div>
+                <% end %>  
+                   
+        
+        
+    

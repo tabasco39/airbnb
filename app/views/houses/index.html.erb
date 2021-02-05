@@ -1,22 +1,43 @@
 
+<br><br>
 
-<div class='container mt-5 pt-5 '>
+
+       <div class="container" style='background-color:white' >
+         
+             <div class="row" style='padding-top:80px'>
+                <div class="col-12">
+                    <!-- Section Heading Area -->
+                    <div class="section-heading text-center">
+                        <h2>Find your host here and savour the experiences</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+<div class='container  ' style='background-color:white'>
+
+    <div class='row'>
+        <div class='col-12'>
+            
+            <%= link_to 'Become a host', new_house_path,class:'btn btn-primary get-started-button',style:'background-color:#fb397d;border:#fb397d;height:40px;border-radius:0px 25px 0 25px' %>
+        </div>
+    </div>
     <div class=row>
-        <div class='col-8' style='display:flex;flex-wrap:wrap'>      
+        <div class='col-12 mt-5' >      
                 <% @houses.each do |house| %>
-                  <div class="card" style="width: 18rem;margin: 20px;border-radius:20px;box-shadow:0px 2px 2px black">
-                    <%= image_tag(house.images[0],height:"180",width:"287",style:'border-radius:20px 20px 10px 10px') %>
+                  <div class="liste single-special  wow fadeInUp" data-wow-delay="0.2s" style="padding: 20px;box-shadow:0px 2px 7px grey;display:flex">
+                    <%= image_tag(house.images[0],height:"225",width:"300",style:'border-radius:15px') %>
                       <div class="card-body">
                       <h6 class="card-title"><%= house.localisation %></h6>
                       <%= link_to 'Regarder',house, class:'btn btn-outline-primary',style:'border-radius:50px' %>
                     </div>
+                    
                   </div>
+                  <br>
+                  <hr><br>
+                  
                 <% end %>      
         </div>
-        <div class='col-4'>
-            <div>
-                 <%= link_to 'New House', new_house_path,class:'btn btn-primary' %>
-            </div>
-        </div>
-    </div>
+    </div>      
 </div>

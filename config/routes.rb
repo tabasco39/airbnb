@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, :controller => {
-    :omniauth_callbacks => 'users/omniauth_callbacks#facebook'
+  devise_for :users, :controllers => {
+      registrations: 'registrations'
   }
    
   devise_scope :user do  
