@@ -1,5 +1,5 @@
 <br><br><br><br>
-<div class='container pt-5' style='background-color:white'>
+<!--<div class='container pt-5' style='background-color:white'>
         <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center">
@@ -12,7 +12,17 @@
         <%= render 'form', house: @house,style:'margin: 0 auto' %>
 
         
-</div>        
+</div>  -->      
 
 
            
+<section class="new-house">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">            
+                        <%= render 'form', house: @house %>
+                        <%= link_to 'Back', houses_path %>
+                </div>
+            </div>
+        </div>        
+</section>

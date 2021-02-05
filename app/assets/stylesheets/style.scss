@@ -11,7 +11,7 @@
 /* --- [Master Stylesheet] ----
 :: 1.0 Base CSS Start
 :: 2.0 Header Area CSS
-:: 3.0 Wellcome Area CSS
+:: 3.0 Welcome Area CSS
 :: 4.0 Special Area CSS
 :: 5.0 Features Area CSS
 :: 6.0 Video Area CSS
@@ -35,6 +35,81 @@
 @import "responsive";
 @import "font-awesome";
 
+
+/* --------------------------
+:: -0.01 CARD HOMEPAGE
+-------------------------- */
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 50px; /* Added */
+}
+
+.card:hover {
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);;
+}
+/* --------------------------
+:: -0.09 Show House
+-------------------------- */
+.show_house {
+    background-image: image-url("bg-img/banner.png");
+    height: 960px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.containera {
+    background-image: image-url("bg-img/form_location.jpg");
+    height: 960px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.form-new-house-loca {
+    background: rgba( 255, 255, 255, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba(34, 35, 46, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 100%;
+    max-width: 400px;
+    margin-top: 50px;
+    padding: 30px ;
+    color: rgb(63, 63, 63);
+}
+/* --------------------------
+:: 0.00 Form for new houses
+-------------------------- */
+.new-house {
+    background-image: image-url("bg-img/new_house.jpg");
+    height: 960px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.form-new-house {
+    background: rgba( 255, 255, 255, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    color: #fff;
+}
+
 /* --------------------------
 :: 0.0 Form Sign in and up
 -------------------------- */
@@ -57,12 +132,16 @@
 }
 
 .form-auth {
-    background-color: rgba(255, 255, 255, 0.6);
+    background: rgba( 207, 207, 207, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 100%;
     max-width: 400px;
     padding: 30px;
     margin: 150px auto;
-    border-radius: 10px;
   }
   .checkbox {
     font-weight: 400;
@@ -302,7 +381,7 @@ p {
 .line-shape {
     width: 80px;
     height: 2px;
-    background-color: #fb397d;
+    background-color: #FE5F55;
     margin-top: 15px;
 }
 
@@ -399,7 +478,7 @@ p {
 
 .menu_area .navbar-brand:hover,
 .menu_area .navbar-brand:focus {
-    color: rgb(167, 92, 49);
+    color: #283044;
 }
 
 
@@ -409,7 +488,7 @@ p {
 }
 
 .menu_area #nav .nav-link {
-    color: #fff;
+    color: rgb(255, 255, 255);
     display: block;
     font-size: 16px;
     font-weight: 500;
@@ -420,9 +499,9 @@ p {
     padding: 35px 15px;
 }
 
-
-.menu_area nav ul li > a:hover {
-    color: #fb397d;
+.menu_area #nav .nav-link:hover {
+    color: #283044;
+    font-size: 17px;
 }
 
 .sign-up-button {
@@ -430,7 +509,7 @@ p {
 }
 
 .sign-up-button > a {
-    background-color: rgb(36, 113, 165);
+    background-color: #79B473;
     color: #fff;
     font-weight: 500;
     display: inline-block;
@@ -442,7 +521,7 @@ p {
 }
 
 .sign-up-button > a:hover {
-    background: rgb(27, 89, 131);
+    background: #283044;
     color: #fff;
     border-color: transparent;
     -webkit-transition-duration: 500ms;
@@ -612,7 +691,7 @@ p {
 
 .single-icon > i {
     font-size: 36px;
-    color: #fb397d;
+    color: #FE5F55;
 }
 
 .single-special > h4 {
@@ -688,7 +767,7 @@ p {
 .app-download-btn.active a,
 .app-download-btn a:hover {
     border-color: transparent;
-    background-color: #000000;
+    background-color: #067562;
 }
 
 .app-download-btn a i {
@@ -737,7 +816,7 @@ p {
 }
 
 .single-feature > i {
-    color: #fb397d;
+    color: #FE5F55;
     font-size: 30px;
     display: inline-block;
     float: left;
@@ -817,7 +896,7 @@ p {
 .cool_facts_area {
     position: relative;
     z-index: auto;
-    background: -webkit-linear-gradient(50deg, #00c4cc, #7d2ae8);
+    background: -webkit-linear-gradient(50deg, #FE5F55, #78A1BB);
     padding: 180px 0 80px 0;
     top: -100px;
 }
@@ -931,7 +1010,7 @@ p {
 
 
 .single-price-plan .package-plan .ca-price h4 {
-    color: #fb397d;
+    color: #067562;
     font-size: 48px;
     position: relative;
     z-index: 1;
@@ -945,7 +1024,7 @@ p {
 }
 
 .single-price-plan .plan-button > a {
-    background: #726a84;
+    background: #067562;
     padding: 10px 0;
     border-bottom-right-radius: 30px;
     color: #ffffff;
@@ -971,7 +1050,7 @@ p {
 .single-price-plan.active .package-plan,
 .single-price-plan.active .plan-button > a,
 .single-price-plan:hover .plan-button > a {
-    background-color: #7593FB;
+    background-color: #FE5F55;
 }
 
 .single-price-plan.active .package-plan .ca-price > h4,
@@ -1005,7 +1084,7 @@ p {
 
 .clients-feedback-area .client > i {
     font-size: 48px;
-    color: #897ceb;
+    color: #FE5F55;
     margin-bottom: 30px;
 }
 
@@ -1037,8 +1116,8 @@ p {
 }
 
 .clients-feedback-area .slick-dots li.slick-active button {
-    background-color: #fb397d;
-    border-color: #fb397d;
+    background-color: #FE5F55;
+    border-color: #FE5F55;
 }
 
 .clients-feedback-area .slick-slide.client-thumbnail {
@@ -1098,7 +1177,7 @@ p {
 -------------------------- */
 
 .our-monthly-membership {
-    background: -webkit-linear-gradient(50deg, #00c4cc, #7d2ae8);
+    background: -webkit-linear-gradient(50deg, #78A1BB, #FE5F55);
 }
 
 .membership-description > h2 {
@@ -1144,6 +1223,7 @@ p {
     border-radius: 30px 30px 30px 0;
     position: relative;
     z-index: 1;
+    background-repeat: repeat-y;
 }
 
 .member-image img {
@@ -1218,6 +1298,7 @@ p {
 	border-radius: 30px 30px 30px 0px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
     margin-bottom: 50px;
+    height: 400px;
 }
 
 /* --------------------------
@@ -1266,7 +1347,7 @@ p {
 }
 
 .btn.submit-btn {
-    background: #fb397d;
+    background: #78A1BB;
     height: 48px;
     min-width: 185px;
     color: #ffffff;
@@ -1275,7 +1356,7 @@ p {
 }
 
 .btn.submit-btn:hover {
-    background: rgb(40, 40, 40);
+    background: #283044;
     color: #fff;
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
@@ -1383,10 +1464,10 @@ p {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(131,127,243,1); 
+    background: #79B473; 
     
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255,0,0,0.4); 
+	background: gray; 
 }
 

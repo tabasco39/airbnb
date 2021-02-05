@@ -1,7 +1,7 @@
 <!-- Preloader Start -->
-<%# <div id="preloader">
+<div id="preloader">
     <div class="devdap-load"></div>
-</div> %>
+</div>
 <%if user_signed_in?%>
 
     <header class="header_area animated">
@@ -18,11 +18,11 @@
                             <div class="collapse navbar-collapse" id="ca-navbar">
                                 <ul class="navbar-nav ml-auto" id="nav">
                                     <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#about">Latest</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#about">Latest news</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#features">Why H. app?</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                                    
+                                    <%= link_to 'Your house', houses_path, class: "nav-link" %>
                                 </ul>
                             </div>
                         </nav>
@@ -49,6 +49,7 @@
         </div>
     </header>
 
+<<<<<<< HEAD
 <% elsif current_page?(new_house_path) %>
     <div class="container-fluid">
             <div class="row align-items-center">
@@ -72,8 +73,9 @@
         </div>
 
 
+=======
+>>>>>>> 486b88adf116ff0fff6a3ffafb4982c24ac6ad50
 <% else %>
-
 <!-- ***** Header Area Start ***** -->
     <header class="header_area animated">
         <div class="container-fluid">
@@ -93,6 +95,7 @@
                                     <li class="nav-item"><a class="nav-link" href="#features">Why H. app?</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                    <%= link_to 'Create house', new_house_path, class: "nav-link" %>
                                     <%= link_to 'Sign in', new_user_session_path, class: "nav-link" %>
                                 </ul>
                             </div>

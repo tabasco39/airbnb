@@ -112,4 +112,58 @@
  <div id="notifications">
 </div>
 
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            <% end %>
+                        <% end %> 
+                    </div>
+                </div> -->
+                <!-- Form -->
 
+<div class='containera'>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <%# <div class="col-12 col-md"> %>
+                <%# <div class="row"> %>
+                    <div class="col-md -4">
+                        <div class='form-new-house-loca'>
+                            <h3 class="text-center"><%= @house.category.name %></h3><br>
+                                <ul>
+                                    <li>Localisation: <%= @house.localisation %></li><br>
+                                    <li>Nombre de chambre: <%= @house.nombre_de_chambre %></li><br>
+                                    <li>Prix/nuit: <%= @house.prix %> Ariary</li>
+                                </ul>
+                            <div>
+                        </div><br>
+                            <%= @house.categorie%>
+                            <%= link_to 'Edit', edit_house_path(@house), class:'btn btn-outline-primary' %> |
+                            <%= link_to 'Back', houses_path, class:'btn btn-outline-secondary' %>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class='form-new-house-loca'>
+                            <h3 class="text-center pt-4">Reservations</h3>
+                            <%= render @house.reservations %>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class='form-new-house-loca'>
+                            <h3>Create a reservation</h3>
+                            <%= render 'reservations/form' %>
+                        </div>
+                    </div> 
+                </div>
+                    </div>
+                </div>
+                <!-- Form end -->
+            </div> 
+        </div>
+    </div>
+</div>

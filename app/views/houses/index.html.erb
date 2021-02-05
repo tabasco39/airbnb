@@ -1,12 +1,12 @@
 
-<br><br>
+<!-- <br><br>
 
 
        <div class="container" style='background-color:white' >
          
              <div class="row" style='padding-top:80px'>
-                <div class="col-12">
-                    <!-- Section Heading Area -->
+                <div class="col-12"> 
+                   
                     <div class="section-heading text-center">
                         <h2>Find your host here and savour the experiences</h2>
                         <div class="line-shape"></div>
@@ -41,4 +41,26 @@
                 <% end %>      
         </div>
     </div>      
-</div>
+</div> -->
+<section class="show_house">
+<div class="container h-100">
+            <div class="row h-100 align-items-center">
+            <div class="col-12 col-md">
+                    <% @houses.each do |house| %>
+                      <div class="card" style="width: 18rem">
+                      <%=image_tag("bg-img/tana.jpeg", alt: "")%>
+                          <div class="card-body">
+                          <h6 class="card-title"><%= house.localisation %></h6>
+                          <%= link_to 'Show',house, class:'btn btn-outline-primary',style:'border-radius:50px' %>
+                        </div>
+                      </div>
+                    <% end %>      
+            </div>
+                <div class='col-12 col-md'>
+                    <div>
+                        <%= link_to 'New House', new_house_path,class:'btn btn-primary' %>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>

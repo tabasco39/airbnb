@@ -1,6 +1,6 @@
 
              
-                <%= form_with model: [ @house, @house.reservations.build ] do |f| %>
+               <!-- <%= form_with model: [ @house, @house.reservations.build ] do |f| %>
                   <div class="card" style="width: 18rem;margin-top: 50px;border-radius:20px;box-shadow:0px 2px 4px grey;padding:10px">
                       <div class="card-head" >
                       <br>
@@ -21,6 +21,20 @@
                   </div>
                 <% end %>  
                    
-        
+ -->       
         
     
+<%= form_with model: [ @house, @house.reservations.build ] do |f| %>
+  <p class="text-left" style="color:white">
+    <%= f.label :comming_date %>
+    <%= f.date_field :comming_date, min: Date.today %>
+  </p>
+
+  <p class="text-left" style="color:white">
+    <%= f.label :leaving_date %>
+    <%= f.date_field :leaving_date, min: Date.today %>
+  </p>
+  <p>
+    <%= f.submit class:"btn btn-primary"%>
+  </p>
+<% end %>
