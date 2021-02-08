@@ -13,45 +13,42 @@
       </ul>
     </div>
   <% end %>
-      <div class='container' >
+      
           <div class='row' >
-          <div class='col-6' style='margin:0 auto;width:100%'>
-          <h3>Caractéristiques du logement</h3>
-          <hr>
-          <br>
+
               <div style='display:flex;justify-content:space-around'>
-                <div class='form-group'>
+                
                     <%= f.label :categorie  %>
                     <%= f.select :category_id,Category.all.map  {|c| [c.name,c.id]},class:'form-control'  %>
-                </div>
-                <div class='form-group'>
+                
+              
                     <%= f.label :Region  %>
                     <%= f.select :location_id, Location.all.map  {|l| [l.city_name,l.id]},class:'form-control'  %>
-                </div>
-              </div><br>   
-            <div class='form-group'>
-                <%= f.label :number_of_rooms  %>
-                <%= f.text_field :nombre_de_chambre,class:'form-control', placeholder: '0 - 9' %>
-            </div>
-            <div class='form-group'>
-                <%= f.label :localization  %>
-                <%= f.text_field :localisation,class:'form-control', placeholder: 'e.g Antananarivo'  %>
-            </div>
-            <div class='form-group'>
-                <%= f.label :price  %>
-                <%= f.text_field :prix,class:'form-control', placeholder: '100000'  %>
-            </div>
-            <div class='form-group'>
-                <%= f.label :images  %>
-                <%= f.file_field :images,multiple:true,class:'form-control'  %>
-            </div><br>
+                    
+                
+              </div>
+                  
+                  <br><br> 
+                
+                      <%= f.label :number_of_rooms  %>
+                      <%= f.text_field :nombre_de_chambre,class:'form-control', placeholder: '0 - 9' %>
+                  
+                      <%= f.label :localization  %>
+                      <%= f.text_field :localisation,class:'form-control', placeholder: 'e.g Antananarivo'  %>
+            
+                      <%= f.label :price  %>
+                      <%= f.text_field :prix,class:'form-control', placeholder: '100000'  %>
+                  
+                      <%= f.label :images  %>
+                      <%= f.file_field :images,multiple:true,class:'form-control'  %>
+                </div><br>
 
             <div class="actions text-center" >
               <%= f.submit class:'btn btn-primary'%>
               <%= link_to 'Back', houses_path %>
             </div>
-            </div>
+         
         </div>    
-      </div>      
+           
 <% end %>
 <br><br><br><br><br>

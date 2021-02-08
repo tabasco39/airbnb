@@ -2,12 +2,10 @@
 <div id="preloader">
     <div class="devdap-load"></div>
 </div>
-<%if user_signed_in?%>
 
-    <header class="header_area animated">
-        
+<%if user_signed_in?%>
+    <header class="header_area animated">      
         <div class="container-fluid">
-        
             <div class="row align-items-center">
                 
                 <!-- Menu Area Start -->
@@ -31,15 +29,17 @@
                     </div>
                 </div>
                 <!-- Signup btn -->
-                <div class="col-12 col-lg-2">
+                <div class="col-12 col-lg-2" style='display:flex;justify-content:center'>
 
                           <div class="dropdown">
-                                <button type="button" class="btn btn-primary " data-toggle="dropdown" style='border-radius:0 15px 0 15px'>
-                                 Your account
-                                </button>
-                                <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Edit account</a>
+                                <a data-toggle="dropdown">   
+                                    <%= image_tag(current_user.avatar,height:"50",width:"50",style:'border-radius:50%') %>    
+                                </a>
+                                <div class="dropdown-menu" style='margin-top:20px;margin-right:50px'>
+                                        <p class="dropdown-item"><b>You are signed with:</b> <br> <%= current_user.name + ' ' + current_user.first_name  %> </p>
+                                        <hr>
                                         <a class="dropdown-item" href="#">Dashboard</a>
+                                        <%= link_to "Modify account", edit_user_registration_path,class:"dropdown-item" %>
                                         <%= link_to "Log out", destroy_user_session_path,class:"dropdown-item" %>
                                         <div class="dropdown-divider"></div>
                                 

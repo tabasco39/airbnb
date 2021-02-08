@@ -9,5 +9,7 @@ class User < ApplicationRecord
   has_many :reservations
 
   has_many :notifications, foreign_key: :recipient_id
+
+  has_one_attached :avatar
 end
                                                                                                                                                                                                                                                                                                                                                                                                                                           
