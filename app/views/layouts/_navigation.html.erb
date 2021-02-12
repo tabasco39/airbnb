@@ -18,11 +18,9 @@
                             <!-- Menu Area -->
                             <div class="collapse navbar-collapse" id="ca-navbar">
                                 <ul class="navbar-nav ml-auto" id="nav">
-                                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#features">Why H. app?</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                                    <%= link_to 'Your house', houses_path, class: "nav-link" %>
+                                    <%= link_to 'Houses', houses_path, class: "nav-link" %>
                                 </ul>
                             </div>
                         </nav>
@@ -32,20 +30,17 @@
                 <div class="col-12 col-lg-2" style='display:flex;justify-content:center'>
 
                           <div class="dropdown">
-                                <a data-toggle="dropdown">   
-
-                                <% if current_user.avatar.attached? %>
-                                    <%= image_tag(current_user.avatar,height:"50",width:"50",style:'border-radius:50%') %>  
-                                <% else %>
-                                    <%= image_tag('boobs.jpg',height:"50",width:"50",style:'border-radius:50%') %>   
-                                    
-                                <% end %>
-                                    
+                                <a data-toggle="dropdown"> 
+                                    <% if current_user.avatar.attached? %>
+                                        <%= image_tag(current_user.avatar,height:"50",width:"50",style:'border-radius:50%') %>    
+                                    <% else %>
+                                        <%= image_tag('avatar.jpg',height:"50",width:"50",style:'border-radius:50%') %>
+                                    <% end %>
                                 </a>
                                 <div class="dropdown-menu" style='margin-top:20px;margin-right:50px'>
                                         <p class="dropdown-item"><b>You are signed with:</b> <br> <%= current_user.name + ' ' + current_user.first_name  %> </p>
                                         <hr>
-                                        <a class="dropdown-item" href="#">Dashboard</a>
+                                        <%= link_to "Dashboard", profile_path(current_user.id), class: "dropdown-item" %>
                                         <%= link_to "Modify account", edit_user_registration_path,class:"dropdown-item" %>
                                         <%= link_to "Log out", destroy_user_session_path,class:"dropdown-item" %>
                                         <div class="dropdown-divider"></div>
@@ -73,9 +68,7 @@
                             <!-- Menu Area -->
                             <div class="collapse navbar-collapse" id="ca-navbar">
                                 <ul class="navbar-nav ml-auto" id="nav">
-                                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#features">Why H. app?</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                                     <%= link_to 'Create house', new_house_path, class: "nav-link" %>
                                     <%= link_to 'Sign in', new_user_session_path, class: "nav-link" %>
