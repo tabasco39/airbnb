@@ -1,0 +1,13 @@
+<% current_user.reservations.each do |reservation| %>
+    <div>
+        <p>
+            <%= link_to reservation.house.localisation , house_path(reservation.house_id) %>
+        </p>
+        <p>
+            <%= reservation.start_time %>
+        </p>
+        <p>
+            <%= reservation.end_time %>
+        </p>
+    </div>
+<% end %>
