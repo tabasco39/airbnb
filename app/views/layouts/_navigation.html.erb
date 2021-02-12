@@ -33,7 +33,14 @@
 
                           <div class="dropdown">
                                 <a data-toggle="dropdown">   
-                                    <%= image_tag(current_user.avatar,height:"50",width:"50",style:'border-radius:50%') %>    
+
+                                <% if current_user.avatar.attached? %>
+                                    <%= image_tag(current_user.avatar,height:"50",width:"50",style:'border-radius:50%') %>  
+                                <% else %>
+                                    <%= image_tag('boobs.jpg',height:"50",width:"50",style:'border-radius:50%') %>   
+                                    
+                                <% end %>
+                                    
                                 </a>
                                 <div class="dropdown-menu" style='margin-top:20px;margin-right:50px'>
                                         <p class="dropdown-item"><b>You are signed with:</b> <br> <%= current_user.name + ' ' + current_user.first_name  %> </p>
