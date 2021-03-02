@@ -8,6 +8,7 @@ class ReservationsController < ApplicationController
         @reservation.guest_name = user.name
         @reservation.house_owner = @house.user
         if @reservation.save
+            ProfileMailer.with(reservation: @reservation).welcome_email.deliver_now
             redirect_to house_path(@house)
         else
             render house_path(@house)

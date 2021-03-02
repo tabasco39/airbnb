@@ -12,6 +12,9 @@ module AibnbClone
     config.load_defaults 6.1
     config.generators.javascript_engine = :js
 
+    config.action_mailer.default_url_options = { host: 'localhost' }
+
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
