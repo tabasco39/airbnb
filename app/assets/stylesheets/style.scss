@@ -55,10 +55,10 @@
 -------------------------- */
 .show_house {
     background-image: image-url("bg-img/banner.png");
-    height: 960px;
+    height: 360px;
     position: relative;
     z-index: 1;
-    background-position: bottom center;
+    background-position: top center;
     background-size: cover;
 }
 
@@ -96,6 +96,11 @@
     background-size: cover;
 }
 
+.text{
+    background-color: white;
+}
+
+
 .form-new-house {
     background: rgba( 255, 255, 255, 0.30 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -121,12 +126,21 @@
     background-position: bottom center;
     background-size: cover;
 }
+.s-ins {
+    background-image: image-url("bg-img/form_location.jpg");
+    height: 960px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+    
+}
 
 .s-up {
     background-image: image-url("bg-img/welcome-bg.png");
     height: 960px;
     position: relative;
-    z-index: 1;
+    
     background-position: bottom center;
     background-size: cover;
 }
@@ -138,10 +152,23 @@
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
     padding: 30px;
     margin: 150px auto;
+  }
+  .form-auths {
+    background: rgba( 207, 207, 207, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 500px;
+    padding: 30px;
+    position: absolute;
+    top: 250px;
+    right: 300px;
+    z-index: 1;
   }
   .checkbox {
     font-weight: 400;

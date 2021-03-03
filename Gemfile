@@ -23,15 +23,22 @@ gem 'wow-rails'
 gem "jquery-slick-rails"
 gem "font-awesome-rails"
 gem 'jquery-rails'
-gem 'coffee-rails', '~> 4.2'
 
 
-
+gem 'leaflet-rails'
+gem 'geocoder'
+gem 'gmaps4rails'
 gem 'mini_magick'
 
-gem 'devise'
+gem 'devise', github: 'heartcombo/devise', branch: 'ca-omniauth-2'
+gem 'omniauth-facebook'
+gem 'omniauth'
+gem 'omniauth-rails_csrf_protection'
+
+gem "simple_calendar", "~> 2.0"
+
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

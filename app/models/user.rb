@@ -7,4 +7,9 @@ class User < ApplicationRecord
   after_create :create_profile
   has_many :houses       
   has_many :reservations
+
+  has_many :notifications, foreign_key: :recipient_id
+
+  has_one_attached :avatar
+                                                                                                                                                                                                                                                                                                                                                                                                                                          
 end

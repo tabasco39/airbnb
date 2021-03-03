@@ -26,64 +26,26 @@
         </div> 
     </section>
     <!-- ***** Wellcome Area End ***** -->
+        
 
     <!-- ***** Special Area Start ***** -->
     <section class="special-area gradient-bck section_padding_100" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Heading Area -->
-                    <div class="section-heading text-center">
-                        <h2>Latest news</h2>
-                        <div class="line-shape"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">               
-                <!-- Single Special Area -->
-                <div class="col-12 col-md-4">
-                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="single-icon">
-                            <i class="fa fa-home" aria-hidden="true"></i>
-                        </div>
-                        <h4>Search Home</h4>
-                        <p>Choose your favourite home.</p>
-                    </div>
-                </div>
-                <!-- Single Special Area -->
-                <div class="col-12 col-md-4">
-                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="single-icon">
-                            <i class="fa fa-bed" aria-hidden="true"></i>
-                        </div>
-                        <h4>Search Hotel</h4>
-                        <p>Check here your Hotel</p>
-                    </div>
-                </div>
-                <!-- Single Special Area -->
-                <div class="col-12 col-md-4">
-                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="single-icon">
-                            <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        </div>
-                        <h4>Spend Anywhere</h4>
-                        <p>Accept all Payment Method.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        
         <!-- CARDS -->
         <div class="container">
+                <div class='row' style='margin:50px'>
+        
+                        <h1 style='margin:0 auto'>Quels destinations vous aimerez ?</h1>
+                        <div class="line-shape"></div>
+                </div> 
             <div class="row">
                 <div class="col-12 col-md-4">
                     <div class="card" style="width: 18rem;">
                         <%=image_tag("bg-img/tana.jpeg", alt: "")%>
                         <div class="card-body text-center">
-                            <h5 class="card-title">Antananarivo</h5>
+                            <h5 class="card-title"> <%= @location.first.city_name  %> </h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="<%=location_path(1) %>" class="btn btn-outline-secondary" style='border:2px solid #fb397d;color:#fb397d;border-radius:25px'>Search  <i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -91,9 +53,9 @@
                     <div class="card" style="width: 18rem;">
                         <%=image_tag("card/janga.jpg", alt: "")%>
                         <div class="card-body text-center">
-                            <h5 class="card-title">Mahajanga</h5>
+                            <h5 class="card-title"><%= @location.find(2).city_name  %></h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="<%=location_path(2) %>" class="btn btn-outline-secondary" style='border:2px solid #fb397d;color:#fb397d;border-radius:25px'>Search  <i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -101,9 +63,9 @@
                     <div class="card" style="width: 18rem;">
                         <%=image_tag("card/tamatave.jpg", alt: "")%>
                         <div class="card-body text-center">
-                            <h5 class="card-title">Toamasina</h5>
+                            <h5 class="card-title"><%= @location.find(3).city_name  %></h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="<%=location_path(3) %>" class="btn btn-outline-secondary" style='border:2px solid #fb397d;color:#fb397d;border-radius:25px'>Search  <i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -111,9 +73,9 @@
                     <div class="card" style="width: 18rem;">
                         <%=image_tag("card/tamatave.jpg", alt: "")%>
                         <div class="card-body text-center">
-                            <h5 class="card-title">Toliara</h5>
+                            <h5 class="card-title"><%= @location.find(4).city_name  %></h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="<%=location_path(4) %>" class="btn btn-outline-secondary" style='border:2px solid #fb397d;color:#fb397d;border-radius:25px'>Search  <i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -121,9 +83,9 @@
                     <div class="card" style="width: 18rem;">
                         <%=image_tag("card/tamatave.jpg", alt: "")%>
                         <div class="card-body text-center">
-                            <h5 class="card-title">Fianarantsoa</h5>
+                            <h5 class="card-title"><%= @location.find(5).city_name  %></h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="<%=location_path(5) %>" class="btn btn-outline-secondary" style='border:2px solid #fb397d;color:#fb397d;border-radius:25px'>Search  <i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -131,9 +93,9 @@
                     <div class="card" style="width: 18rem;">
                         <%=image_tag("card/tamatave.jpg", alt: "")%>
                         <div class="card-body text-center">
-                            <h5 class="card-title">Antsiranana</h5>
+                            <h5 class="card-title"><%= @location.find(6).city_name  %></h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-outline-secondary">Search  <i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="<%=location_path(6) %>" class="btn btn-outline-secondary" style='border:2px solid #fb397d;color:#fb397d;border-radius:25px'>Search  <i class="fa fa-search" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -637,7 +599,7 @@
                         </div>
                         <div class="member-text">
                             <h4>Antsa Ranaivo</h4>
-                            <p>Back-End</p>
+                            <p>Full stack</p>
                         </div>
                     </div>
                 </div>

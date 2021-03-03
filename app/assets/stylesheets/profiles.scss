@@ -1,3 +1,198 @@
 // Place all the styles related to the profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+:root {
+   --nav-width: 85px;
+   --first-color: #0C5DF4;
+   --bg-color: #12192C;
+   --sub-color: #B6CEFC;   
+   --body-font: 'Poppins',sans-serif;
+   --normal-font-size: 1rem;
+   --small-font-size:.875rem;
+   --z-fixed:100;
+   --white-color: #ffff;
+}
+*,::before,::after {
+   box-sizing: border-box;                 
+}
+// body{
+//   position: relative;
+//   margin: 0;   
+//   padding: 2rem 0 0 6.75rem; 
+//   font-family: var(--body--font);   
+//   font-size: var(--normal-font-size);    
+//   transition: .5s;      
+// }
+.wrapper .header {
+  z-index: 1;
+  background: #22242A;
+  position: fixed;
+  width: calc(100% - 0%);
+  height: 70px;
+  display: flex;
+  top: 0;
+}
+
+// .navbar {
+//     background: #ffffff;
+//     grid-area: nav;
+//     height:50px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 0 30px 0 30px;
+//     border-bottom: 1px solid lightgray;
+//     padding-left: 100px;               
+// }
+.nav_icon {
+   display: none;
+                    
+}
+.nav_icon > i {
+   font-size: 26px;
+   color: #a5aaad;
+
+}
+.navbar__left > a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #a5aaad;
+    font-size: 15px;
+    font-weight: 700;                
+}
+
+.navbar__right {
+   display: flex;
+   justify-content: center;
+   align-items: center;                 
+}
+.navbar__right > a {
+   margin-left: 20px;
+   text-decoration: none;               
+}
+.navbar__right > a > ion-icon {
+   color: #a4aeb4;
+   font-size: 20px;
+   border-radius: 50px;
+   background: #ffffff;
+   box-shadow: 2px 2px 5px #d9d9d9,
+               -2px -2px 5px #ffffff;                 
+}
+.profil {
+    width: 50px;  
+    height: 50px;
+     border-radius: 50px;
+     margin-bottom: 5px;               
+}
+
+h1{
+  margin: 0;                  
+}
+// ul{
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;                  
+// }
+a{
+  text-decoration: none;                  
+}
+.s-navbar{
+   position: fixed;
+   left: 0;
+   width: var(--nav-width);
+   height: 100vh;
+   background-color: var(--bg-color);  
+   color: var(--white-color);  
+   padding: 1.5rem 1.5rem 2rem;
+   transition: .5s;
+   z-index: var(--z-fixed);             
+}
+.navsi{                
+   height: 100%;
+   display: flex;
+   flex-direction: column;    
+   justify-content: space-between;
+   overflow: hidden;             
+}
+.nav__brand{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.nav__toggle{
+  font-size: 1.25rem;
+  padding: .75rem;
+  cursor: pointer;
+}
+.nav__logo{
+  color: var(--white-color);
+  font-size: 600;
+}
+.nav__link{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: .75rem;
+  padding: .75rem;
+  color: var(--white-color);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+.nav__link:hover{
+  background-color: var(--first-color);
+}
+.nav__icon{
+  font-size: 1.25rem;
+}
+.nav__name{
+  font-size: var(--small-font-size);
+}
+.expander{
+  width: calc(var(--nav-width) + 9.25rem);
+}
+.body-pd{
+  padding: 2rem 0 0 16rem;
+}
+// .active{
+//   background-color: var(--first-color);
+// }
+.collapse{
+  grid-template-columns: 20px max-content 1fr;
+}
+.collapse__link{
+  justify-self: flex-end;
+  transition: .5;
+}
+.collapse__menu{
+ display: none;
+ padding: .75rem 2.25rem;
+ transition: .5;
+}
+.collapse__sublink{
+  color: var(--white-color);
+  font-size: var(--small-font-size);
+  transition: .5s;
+}
+.collapse__sublink:hover{
+  color: var(--white-color );
+}
+.showCollapse{
+  display: block;
+}
+.rotate{
+  transform: rotate(180deg);
+  transition: .5s
+}
+
+#calendar{
+  width: auto;
+  position: relative;
+  margin-left: 88px;
+  margin-top: 10px;
+}
+.card{
+  margin-top: 10px;
+}

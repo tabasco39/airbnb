@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_28_174343) do
+ActiveRecord::Schema.define(version: 2021_02_04_063933) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -57,12 +57,25 @@ ActiveRecord::Schema.define(version: 2021_01_28_174343) do
     t.integer "user_id"
     t.integer "category_id"
     t.integer "location_id"
+    t.float "longitude"
+    t.float "latitude"
   end
 
   create_table "locations", force: :cascade do |t|
     t.string "city_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "recipient_id"
+    t.string "action"
+    t.string "notifiable_type"
+    t.integer "notifiable_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -75,8 +88,8 @@ ActiveRecord::Schema.define(version: 2021_01_28_174343) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.date "comming_date"
-    t.date "leaving_date"
+    t.date "start_time"
+    t.date "end_time"
     t.string "guest_name"
     t.string "house_owner"
     t.integer "user_id"
@@ -97,6 +110,8 @@ ActiveRecord::Schema.define(version: 2021_01_28_174343) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "first_name"
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -106,6 +121,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_174343) do
   add_foreign_key "houses", "categories"
   add_foreign_key "houses", "locations"
   add_foreign_key "houses", "users"
+  add_foreign_key "notifications", "users"
   add_foreign_key "reservations", "houses"
   add_foreign_key "reservations", "users"
 end
