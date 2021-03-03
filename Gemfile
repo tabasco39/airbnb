@@ -23,7 +23,7 @@ gem 'wow-rails'
 gem "jquery-slick-rails"
 gem "font-awesome-rails"
 gem 'jquery-rails'
-
+gem 'stripe'
 
 gem 'leaflet-rails'
 gem 'geocoder'

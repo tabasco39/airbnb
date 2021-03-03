@@ -9,11 +9,14 @@ class ReservationsController < ApplicationController
         @reservation.house_owner = @house.user
         if @reservation.save
             ProfileMailer.with(reservation: @reservation).welcome_email.deliver_now
-            redirect_to house_path(@house)
+            redirect_to house_reservation_path(id: @reservation.id)
         else
             render house_path(@house)
         end
     
+    end
+    def show
+        @reservation = Reservation.find_by(house_id:(params[:house_id]), id:(params[:id]))
     end
     private
     def reservation_params

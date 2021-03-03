@@ -12,8 +12,13 @@ Rails.application.routes.draw do
   resources :homes, only: [:show, :index]
 
   resources :houses do
-    resources :reservations
-  end
+    resources :reservations ,only: [:create, :show] do
+      resources :charges, only: [:new,:create, :show]
+      end
+    end
+  resources :charges, only: [:new,:create, :show]
+ 
+
   resources :categories, only: [:show, :index]
   resources :locations, only: [:show, :index]
   resources :profiles, only: [:show,:edit]

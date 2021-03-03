@@ -250,6 +250,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stripe (5.30.0)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -313,6 +314,7 @@ DEPENDENCIES
   simple_calendar (~> 2.0)
   spring
   sqlite3 (~> 1.4)
+  stripe
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
@@ -321,4 +323,4 @@ DEPENDENCIES
   wow-rails
 
 BUNDLED WITH
-   2.2.7
+   2.2.12
